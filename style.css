@@ -1,0 +1,37 @@
+/*  tipos de selectores*/
+body {
+    background-color: black; /* estp cambio el fondo de mi pagina */
+    color:cyan; /* esto va a cambiar el color de letras*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* esto es para cambiar el estilo de la letra*/
+}
+
+/* edicion del boton escribir etiqueta y colocar llaves {}*/
+button {
+    background-color: #B26C5F; /*sacamos el color con ColorSpace*/
+    color: #4A4453;
+    /*Para editar el tamaño de mi boton*/
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+/* CSS type selector: pseudo class selector: acciones que pueden tener algunos elementos */
+button:hover {
+    background-color: #ECA091;
+}
+
+h1 {
+    color: #BFA9E3;
+    padding: 20px;
+    lighting-color: #BA923B;
+
+}
+
+h2 {
+    color: #007558;
+}
+
+h3 {
+    color: #BA923B;
+}
