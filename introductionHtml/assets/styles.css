@@ -1,0 +1,22 @@
+/* El asterisco es un selector universal y aplica en todos los elementos */
+*{
+    background-color: plum;
+}
+
+h1,
+h3{ /*Selector de tipo: selecciona los elementos con ese nombre, es decir solo h1*/
+    color:purple;
+    text-align:center;
+    font-family:cursive; 
+}
+
+h2{ /* Aqui solo va a seleccionar lo que tenga como elementos h2, es muy poco especifico*/
+    color:darkgreen;
+    text-align:center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*Selector de clase: afectar cosas en especifico */
+.subcategoria{
+    background-color: cyan;
+}
