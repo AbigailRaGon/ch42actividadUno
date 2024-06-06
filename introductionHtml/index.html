@@ -16,27 +16,53 @@
     <!--Relacionar hoja de estilos antes de head, link es de autocierre-->
     <link rel="stylesheet" href="./assets/styles.css"> <!--nuestra hoja de estilo esta en otra carpeta, esta en otro nivel, entonces utilizamos ./-->
 
+    <!--Vamos a agregar una fuente-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <style> /*Estilo interno o embebido, no es tan recomendado*/
+    h3{
+        color:hotpink;
+        background-color: #009C73;
+    }
+
+    </style>
+
 </head>
 
 <body> <!-- Tiene el contenido visible de la pagina web
     Headers - encabezados h1-h6-->
 
+<div>
+
     <h1> Fan Page My Chemical Romance </h1>
-    <p> Esta es una pagina dedicada a mi banda favorita </p>
+
+    <!--añadir imagen, img es una etiqueta de autocierre y tiene dos atributos de cajon: src- source: recurso, imagen. alt- alternative: texto que describe a la imagen, importante para la accesibilidad-->
+    <img src="./assets/images/fotoMCR.jpeg" alt="foto de los 5 integrantes de la banda my chemical romance vestidos de trajes negros">
+
+
+
+
+    <!--Esto es un ejemplo de css dentro de html, solo esta etiqueta tiene sus valores especificos-->
+    <p style="color:darkred; font-size: 20px;"> <strong>Esta es una pagina dedicada a mi banda favorita</strong> </p>
 
     <!--Lorem nos ayuda a rellenar texto para darle visualizacion y ver mas o menos como nos va quedando el texto, es de relleno-->
     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum unde voluptas provident dolore recusandae suscipit neque, culpa ducimus tempore alias quidem sequi earum, odio ipsam vero officia, quaerat beatae. Odio?
     </p>
 
-    <h2> Historia de My Chemical Romance </h2>
-    
-    Fueron una banda norteamericana de rock formada en 2001. Los integrantes son Gerard Way, Mikey Way, Ray Toro, Bob Bryar y Frank Lero.
+</div>
 
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam sunt quas architecto quaerat sed quasi iure odit sit vitae repudiandae exercitationem consequatur, dolor qui illo perspiciatis molestiae nulla, praesentium dicta?</p>
+    <!--Selector ID no se comparte-->
+    <h2 id="categoriaPrincipal"> Historia de My Chemical Romance </h2>
+    
+    Fueron una banda norteamericana de rock formada en 2001. <br>  Los integrantes son Gerard Way, Mikey Way, Ray Toro, Bob Bryar y Frank Lero.
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam sunt quas architecto quaerat sed quasi iure odit sit vitae repudiandae exercitationem consequatur, dolor qui illo perspiciatis molestiae nulla, praesentium dicta? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores rem doloribus error est architecto, consequatur exercitationem facere placeat sunt! Nemo aliquam id earum cum explicabo vero magni vitae, alias deleniti.</p>
 
     <h3>Anécdotas</h3>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit soluta maxime nobis cum minima reprehenderit fugiat aliquam vitae est sequi, dignissimos ratione nam dolores, dolore exercitationem deleniti, repellat molestiae ut?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit soluta maxime nobis cum minima reprehenderit fugiat aliquam vitae est sequi, dignissimos ratione nam dolores, dolore exercitationem deleniti, repellat molestiae ut? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est voluptatem nulla dignissimos voluptas ea repellendus pariatur? Voluptate sapiente, minima nulla suscipit nesciunt assumenda quibusdam autem neque tempore, quidem reiciendis debitis.</p>
 
     <!--Selector de clase-->
     <h2 class="subcategoria">Canciones más populares</h2>
@@ -63,6 +89,9 @@
         <li>It's not a Fashion Statement, It's a Deathwish</li>
         <li>Give 'Em Hell, Kid</li>
     </ul>
+
+<!--Las clases se pueden compartir, aqui compartimos de nuevo "subcategoria"-->
+<h2 class="subcategoria">Integrantes de la banda</h2>
 
 <!-- Lista descriptiva
 Necesita dt y dd-->

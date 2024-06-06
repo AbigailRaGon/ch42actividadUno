@@ -1,22 +1,51 @@
 /* El asterisco es un selector universal y aplica en todos los elementos */
 *{
-    background-color: plum;
+    background-color: #4AAE5F;
 }
+
+/*Vamos a agregar una fuente*/
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 900
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
 
 h1,
 h3{ /*Selector de tipo: selecciona los elementos con ese nombre, es decir solo h1*/
-    color:purple;
+    color:#00887E;
     text-align:center;
-    font-family:cursive; 
+    font-family: "Playfair Display", serif;
 }
 
 h2{ /* Aqui solo va a seleccionar lo que tenga como elementos h2, es muy poco especifico*/
-    color:darkgreen;
-    text-align:center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#000000;
+    text-align:left;
+    font-family:"Playfair Display", serif;
 }
 
-/*Selector de clase: afectar cosas en especifico */
+/*Selector de clase: afectar cosas en especifico, las clases se pueden compartir y la debemos declarar en css con un .+nombre{} */
 .subcategoria{
-    background-color: cyan;
+    background-color:#009C73;
+}
+
+/*Selector de ID. Los declaramos con el signo de gato en css #+nombre{}*/
+#categoriaPrincipal{
+    background-color: #00727D;
+    width:40%; /*Esto es el ancho de un elemento, ocupa diferentes unidades de medidas, px, em, %, etc*/
+    border-radius:20px; /*Redondea las esquinas del elemento, ocupa diferentes unidades de medidas, px, em, %, etc*/
+}
+
+/*Pseudo-clase, la mas utilizada es hover*/
+p:hover{
+    background-color: pink;
+}
+
+/*Pseudo-elementos*/
+p::first-letter{
+    color: greenyellow;
 }
