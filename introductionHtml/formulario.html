@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +14,77 @@
                 <li><a href="./index.html" target="_blank">Inicio</a></li> <!--Elemento de la lista, dentro del elemento agregamos etiqueta a de anchor-->
                 <li><a href="https://www.farmaciasguadalajara.com/" target="_blank">Nosotras</a></li>
                 <li><a href="https://www.farmaciasguadalajara.com/ayuda/cont%C3%A1ctanos" target="_blank">Contacto</a></li>
-<!--Target nos ayuda a abrir una pestaña nueva-->
+                <!--Target nos ayuda a abrir una pestaña nueva-->
             </ul>
         </nav>
     </header>
 <main>
     <h1>¡Haz tu pedido!</h1>
-    <form action="https://formsubmit.co/abigailrg03@gmail.com" method="POST"></form> <!--formsubmit.com sacamos el link-->
+    <form action="https://formsubmit.co/abigailrg03@gmail.com" method="POST">
+        <fieldset id="datos-basicos">
+            <!--Se recomienda asociar una etiqueta label con el imput, el valor de for en label debe de ser igual al valor de name en imput-->
+            <legend>Datos básicos</legend>
+            <label for="nombre-completo">Nombre completo:
+            <input name="nombre-completo" type="text" 
+            placeholder="Por ejemplo, Nancy Moreno" required></label>  
+            <!--el atributo name en la etiqueta input se utiliza para identificar el valor del campo de entrada cuando se envia en el formulario, lo anterior esta anidado-->
+
+            <!--Tambien se puede escribir el imput y label por separado pero el valor las asocia por que debe de ser el mismo-->
+
+            <br> <!--elemento br permite romper la linea y hacer que se vea como una lista y no todo seguido-->
+            <label for="correo">Correo electrónico:</label>
+            <input name="correo" type="email" placeholder="tucorreo@correo.com" required>
+
+            <br>
+            <label for="telefono">Número telefónico:</label>
+            <input name="telefono" type="tel" placeholder="A 10 dígitos" required>
+
+
+        </fieldset>
+
+        <fieldset id="datos-pedido">
+            <label for="menu-postres">¿Qué tipo de postre deseas?</label>
+            <legend>Datos del pedido</legend>
+
+            <select name="menu-postres"> <!--Opciones que existen y lista que puede seleccionar el usuario, opciones despegables, con scroll infinito hasta encontrar la opcion deseada-->
+                <option value="Brownies">Brownies</option>
+                <option value="Galletas">Galletas</option>
+                <option value="Pastel-de-chocolate">Pastel de chocolate</option>
+                <option value="Pay-de-limón">Pay de limón</option>
+                <option value="Donas">Donas</option>
+                <option value="Flan">Flan</option>
+                <option value="Fresas-con-crema">Fresas con crema</option>
+            </select>
+
+            <input list="opciones-postres"> <!-- Con la siguiente opcion, no se hace scroll infinito y el usuario puede poner las primeras letras del elemento que busca-->
+            <datalist id="opciones-postres">
+                <option value="Brownies">Brownies</option>
+                <option value="Galletas">Galletas</option>
+                <option value="Pastel de chocolate">Pastel de chocolate</option>
+                <option value="Pay de limón">Pay de limón</option>
+                <option value="Donas">Donas</option>
+                <option value="Flan">Flan</option>
+                <option value="Fresas con crema">Fresas con crema</option>
+            </datalist>
+
+            <br>
+            <label for="piezas-postre">Unidades</label>
+            <input name="piezas-postre" type="number" min="5" max="100" required>
+
+            <br>
+            <label for="fecha-de-entrega">Fecha del evento:</label>
+            <input name="fecha-de-entrega" type="date">
+
+        </fieldset>
+        
+        <fieldset id="datos-envio">
+            <legend>Datos del envío</legend>
+        </fieldset>
+
+    </form> <!--formsubmit.com sacamos el link, recordar atributos de nombre, muy importante-->
 </main>
 
 </body>
 
 </html>
+
