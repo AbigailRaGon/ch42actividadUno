@@ -49,11 +49,11 @@
             <select name="menu-postres"> <!--Opciones que existen y lista que puede seleccionar el usuario, opciones despegables, con scroll infinito hasta encontrar la opcion deseada-->
                 <option value="Brownies">Brownies</option>
                 <option value="Galletas">Galletas</option>
-                <option value="Pastel-de-chocolate">Pastel de chocolate</option>
-                <option value="Pay-de-limón">Pay de limón</option>
+                <option value="Pastel de chocolate">Pastel de chocolate</option>
+                <option value="Pay de limón">Pay de limón</option>
                 <option value="Donas">Donas</option>
                 <option value="Flan">Flan</option>
-                <option value="Fresas-con-crema">Fresas con crema</option>
+                <option value="Fresas con crema">Fresas con crema</option>
             </select>
 
             <input list="opciones-postres"> <!-- Con la siguiente opcion, no se hace scroll infinito y el usuario puede poner las primeras letras del elemento que busca-->
@@ -79,7 +79,32 @@
         
         <fieldset id="datos-envio">
             <legend>Datos del envío</legend>
+
+            <br> <!--Se le da el mismo nombre para que solo se seleccione uno y el usuario no seleccione otras cosas-->
+            <!--Vamos a utilizar Radio para que aparezcan los circulitos-->
+            <input id="envio-domicilio" type="radio" name="tipo-de-envio" value="envio-domicilio" required>
+            <label for="envio-domicilio">Envío a domicilio</label>
+
+            <br>
+            <input id="recoger-tienda" type="radio" name="tipo-de-envio" value="recoger-tienda" required>
+            <label for="recoger-tienda">Recoger en tienda</label>
+
+            <br> 
+            <input id="envio-express" type="radio" name="tipo-de-envio" value="envio-express"required>
+            <label for="envio-express">Envío express</label>
+
         </fieldset>
+
+        <!--Cuadrito de terminos y condiciones-->
+        <fieldset>
+            <legend>Acepto los términos y condiciones</legend>
+            <input type="checkbox" id="estoy-deacuerdo" name="estoy-deacuerdo" checked>
+            <label for="estoy-deacuerdo">Estoy de acuerdo</label>
+
+        </fieldset>
+
+        <!--Boton de envio de formato finalizado-->
+        <input type="submit" value="Finalizar Pedido">
 
     </form> <!--formsubmit.com sacamos el link, recordar atributos de nombre, muy importante-->
 </main>
