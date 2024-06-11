@@ -1,0 +1,39 @@
+.titulo{
+    color: rgb(191, 233, 255);
+} /*Selector de clase tiene mas especificidad que un selector de etiqueta, esta clase tiene un valor de 10*/
+
+/*Estos bloques ya no se aplicarian*/
+h1{
+    color: crimson; /*Colores predeterminados*/
+    font-family: Arial, Helvetica, sans-serif;
+}/*Este selector de etiqueta solamente vale 1*/
+
+h1{
+    color: #F08080; /*Colores hexadecimales*/
+    font-family:cursive;
+}
+
+/*CSS tomara la ultima regla del bloque declarativo, asi funciona el metodo de cascada, tomara las ultimas caracteristicas o reglas modificadas*/
+
+h1{
+    color: rgb(128, 0, 128);/*Colores rgb*/
+    color: black;
+} /*https://www.rapidtables.org/web/color/RGB_Color.html*/
+
+/*
+Valor de 1: selectores de tipo y pseudoelementos
+Valor de 10: Selectores de clase, atributo y pseudoelementos
+Valor de 100: selectores de id
+*/
+
+/*Suma de especificidad, ahora tiene valor 11 porque se sumo el valor de cada selector, etiqueta+clase */
+h1.titulo{
+    color:crimson;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/*Selector de id tiene un valor de 100, por lo que la especificidad tomara en este en cuenta*/
+#titulo-principal{
+    color: darkolivegreen;
+    font-family: monospace;
+}
