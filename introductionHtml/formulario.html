@@ -18,31 +18,31 @@
             </ul>
         </nav>
     </header>
-<main>
-    <h1>¡Haz tu pedido!</h1>
-    <form action="https://formsubmit.co/abigailrg03@gmail.com" method="POST">
-        <fieldset id="datos-basicos">
+    <main>
+        <h1>¡Haz tu pedido!</h1>
+        <form action="https://formsubmit.co/abigailrg03@gmail.com" method="POST">
+            <fieldset id="datos-basicos">
             <!--Se recomienda asociar una etiqueta label con el imput, el valor de for en label debe de ser igual al valor de name en imput-->
-            <legend>Datos básicos</legend>
-            <label for="nombre-completo">Nombre completo:
-            <input name="nombre-completo" type="text" 
+                <legend>Datos básicos</legend>
+                <label for="nombre-completo">Nombre completo:
+                <input name="nombre-completo" type="text" 
             placeholder="Por ejemplo, Nancy Moreno" required></label>  
             <!--el atributo name en la etiqueta input se utiliza para identificar el valor del campo de entrada cuando se envia en el formulario, lo anterior esta anidado-->
 
             <!--Tambien se puede escribir el imput y label por separado pero el valor las asocia por que debe de ser el mismo-->
 
-            <br> <!--elemento br permite romper la linea y hacer que se vea como una lista y no todo seguido-->
-            <label for="correo">Correo electrónico:</label>
-            <input name="correo" type="email" placeholder="tucorreo@correo.com" required>
+                <br> <!--elemento br permite romper la linea y hacer que se vea como una lista y no todo seguido-->
+                <label for="correo">Correo electrónico:</label>
+                <input name="correo" type="email" placeholder="tucorreo@correo.com" required>
 
-            <br>
-            <label for="telefono">Número telefónico:</label>
-            <input name="telefono" type="tel" placeholder="A 10 dígitos" required>
+                <br>
+                <label for="telefono">Número telefónico:</label>
+                <input name="telefono" type="tel" placeholder="A 10 dígitos" required>
 
 
-        </fieldset>
+            </fieldset>
 
-        <fieldset id="datos-pedido">
+            <fieldset id="datos-pedido">
             <label for="menu-postres">¿Qué tipo de postre deseas?</label>
             <legend>Datos del pedido</legend>
 
@@ -56,7 +56,7 @@
                 <option value="Fresas con crema">Fresas con crema</option>
             </select>
 
-            <input list="opciones-postres"> <!-- Con la siguiente opcion, no se hace scroll infinito y el usuario puede poner las primeras letras del elemento que busca-->
+            <input list="opciones-postres"> <!-- Con la siguiente opcion, no se hace scroll infinito y el usuario puede poner las primeras letras del elemento que busca y aparecen las opciones-->
             <datalist id="opciones-postres">
                 <option value="Brownies">Brownies</option>
                 <option value="Galletas">Galletas</option>
@@ -75,13 +75,14 @@
             <label for="fecha-de-entrega">Fecha del evento:</label>
             <input name="fecha-de-entrega" type="date">
 
-        </fieldset>
+            </fieldset>
         
-        <fieldset id="datos-envio">
+            <fieldset id="datos-envio">
             <legend>Datos del envío</legend>
-
-            <br> <!--Se le da el mismo nombre para que solo se seleccione uno y el usuario no seleccione otras cosas-->
-            <!--Vamos a utilizar Radio para que aparezcan los circulitos-->
+            <p>Por favor, selecciona una opción de envío:</p>
+            <!--Vamos a utilizar el elemento Radio para que aparezcan los circulitos-->
+            <!--Se le da el mismo nombre al radio para que solo se seleccione uno y el usuario no seleccione otras cosas, estos inputs estan agrupados-->
+            <!-- ID unicos y no se comparten y deben de ser los mismo que en for de label, una vez que relacionemos, el usuario puede seleccionar el texto de la opcion y el circulito se seleccionara-->
             <input id="envio-domicilio" type="radio" name="tipo-de-envio" value="envio-domicilio" required>
             <label for="envio-domicilio">Envío a domicilio</label>
 
@@ -93,21 +94,23 @@
             <input id="envio-express" type="radio" name="tipo-de-envio" value="envio-express"required>
             <label for="envio-express">Envío express</label>
 
-        </fieldset>
+            </fieldset>
 
-        <!--Cuadrito de terminos y condiciones-->
-        <fieldset>
+            <!--Cuadrito de terminos y condiciones con un contenedor generico: div y su clase-->
+            <div class="contenedor-terminos">
             <legend>Acepto los términos y condiciones</legend>
-            <input type="checkbox" id="estoy-deacuerdo" name="estoy-deacuerdo" checked>
+            <input type="checkbox" id="estoy-deacuerdo" name="estoy-deacuerdo" checked required>
             <label for="estoy-deacuerdo">Estoy de acuerdo</label>
+            </div>
 
-        </fieldset>
+            <!--Boton de envio de formato finalizado-->
+            <!--input type="submit" value="Finalizar Pedido"-->
+            <button type="submit">Finalizar pedido</button>
 
-        <!--Boton de envio de formato finalizado-->
-        <input type="submit" value="Finalizar Pedido">
 
-    </form> <!--formsubmit.com sacamos el link, recordar atributos de nombre, muy importante-->
-</main>
+
+        </form> <!--formsubmit.com sacamos el link, recordar atributos de nombre, muy importante-->
+    </main>
 
 </body>
 
