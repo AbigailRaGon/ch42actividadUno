@@ -1,3 +1,42 @@
-*{
-    background-color: aqua;
+/*Resetear estilos para empezar desde cero y es de TODO*/
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Incluye el padding y el border en el ancho y alto total de los elementos*/
+}
+
+/*Aqui tambien podemos declarar variables para reutilizarlos para que sea mas facil, utilizamos root*/
+
+:root{
+    --color_texto: #006966;
+    --color_elementos_fieldset: #BDA5AC;
+    --color_boton: #C97090;
+    --color-fieldset: #564148;
+}
+
+nav{/*Utilizamso u selector de tipo, para afectar al contenedor de nav*/
+    display: flex; /*Se aplica flex al contenedr de nav, lo que permite una distribución flexible de los elementos*/
+    justify-content: space-between; /*Permite que haya espacio entre los elementos*/
+    align-items: center; /*Alineacion vertcal de los elementos al centro*/
+}
+
+/*Agregamos img para ser mas especificos que queremos editar para el id logo*/
+#logo img{
+    width: 300px; /*Tamaño fijo de la imagen, se utilizo una unidad de medida absoluta*/
+    height: auto; /*Mantiene la proporcion en automatico*/
+    margin: 10px 15px;
+    /*se lee al sentido de las manecillas del reloj TRouBle= top, right, bottom,left*/
+}
+
+/*Hijo de nav, mi lista desordenada ul*/
+nav>ul{
+    list-style-type: none;
+    display: flex; /*alineacion horizontal*/
+}
+
+/*estilos de los elementos de la barra de navegación, hicimos una clase*/
+.elementos-navegacion{
+    margin: 20px 50px;
+    font-size: 1.3em; /*Unidad relativa*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
